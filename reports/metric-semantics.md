@@ -7,6 +7,13 @@
 - Input: `tests/fixtures/sample-auditctl.ndjson`, 17 records, hash recorded in `evidence/input-manifest.json`
 - Input time range: 2026-08-01T10:00:00Z through 2026-08-03T12:10:00Z
 
+The original fixture grounding remains the adapter-shape baseline. The real
+workflow campaign is a second, sanitized reconstruction at FlowLab commit
+`c475e37`: eight records derived from the local-inference receipt and takeover
+commit `4412ca1`. Its source and transformation limits are recorded in
+`evidence/campaign-2026-08-20/provenance.json`. It is Auditctl-shaped input, not
+evidence that the source systems emitted native Auditctl events.
+
 ## Canonical event mapping
 
 | Canonical event | Sanitized source shape | Confidence | Known gaps |
@@ -44,3 +51,12 @@ not promote its strength.
 
 The available `time_to_first_verified_seconds` value is a supporting diagnostic,
 not a substitute for time-to-verified-complete.
+
+## Campaign result
+
+The campaign baseline has two measurable sessions, no resolved blockers, one
+unresolved verification blocker, one truncated session, one strong mechanical
+pass, and one strong independent-review failure. Its 24.4% median orientation
+fraction is not an adoption signal because the preregistered minimum is ten
+sessions. The endogenous/exogenous split, competitive-duplication variance,
+and exogenous-speculation share remain unmeasurable.

@@ -51,6 +51,23 @@ PYTHONPATH=src python -m flowlab run /path/to/audit.ndjson \
   --out-dir reports/baseline
 ```
 
+## Completed sanitized campaign
+
+The 20 August campaign is captured in
+[`reports/final-outcome.md`](reports/final-outcome.md). Its deterministic input
+is a public-safe, Auditctl-shaped reconstruction of two inspected workflows;
+it is not presented as a native Auditctl export. Reproduce it with:
+
+```bash
+./scripts/verify.sh
+./scripts/run-campaign.sh reports/reproduction
+diff -u reports/baseline/report.json reports/reproduction/report.json
+```
+
+All capacity-policy interventions remain unmeasurable from this sample. The
+useful positive result is narrower: local inference completed one bounded,
+mechanically verified repository task under frontier review.
+
 ## Start here on Thursday
 
 Hand [`HANDOFF.md`](HANDOFF.md) to the orchestrator. It is the authoritative campaign brief. The machine-readable workfront graph is [`campaign.json`](campaign.json), and [`THURSDAY_RUNBOOK.md`](THURSDAY_RUNBOOK.md) reserves quota for integration rather than spending it all on parallel beginnings.

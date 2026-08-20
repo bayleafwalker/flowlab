@@ -1,0 +1,119 @@
+{
+  "candidates": {
+    "blocker": [
+      "blocker_class",
+      "blocker_id"
+    ],
+    "event_type": [
+      "type",
+      "oracle.kind"
+    ],
+    "oracle": [
+      "oracle.kind",
+      "oracle.result",
+      "oracle.strength"
+    ],
+    "session_id": [
+      "session_id"
+    ],
+    "timestamp": [
+      "ts"
+    ],
+    "work_id": [
+      "work_id"
+    ]
+  },
+  "errors": [],
+  "fields": {
+    "blocker_class": {
+      "count": 1,
+      "coverage": 0.125,
+      "samples": [],
+      "types": {
+        "str": 1
+      }
+    },
+    "blocker_id": {
+      "count": 1,
+      "coverage": 0.125,
+      "samples": [],
+      "types": {
+        "str": 1
+      }
+    },
+    "control": {
+      "count": 1,
+      "coverage": 0.125,
+      "samples": [],
+      "types": {
+        "str": 1
+      }
+    },
+    "oracle.kind": {
+      "count": 2,
+      "coverage": 0.25,
+      "samples": [],
+      "types": {
+        "str": 2
+      }
+    },
+    "oracle.result": {
+      "count": 2,
+      "coverage": 0.25,
+      "samples": [],
+      "types": {
+        "str": 2
+      }
+    },
+    "oracle.strength": {
+      "count": 2,
+      "coverage": 0.25,
+      "samples": [],
+      "types": {
+        "str": 2
+      }
+    },
+    "session_id": {
+      "count": 8,
+      "coverage": 1.0,
+      "samples": [],
+      "types": {
+        "str": 8
+      }
+    },
+    "ts": {
+      "count": 8,
+      "coverage": 1.0,
+      "samples": [],
+      "types": {
+        "str": 8
+      }
+    },
+    "type": {
+      "count": 8,
+      "coverage": 1.0,
+      "samples": [],
+      "types": {
+        "str": 8
+      }
+    },
+    "work_id": {
+      "count": 8,
+      "coverage": 1.0,
+      "samples": [],
+      "types": {
+        "str": 8
+      }
+    }
+  },
+  "input": {
+    "invalid_records": 0,
+    "path_name": "sanitized-auditctl.ndjson",
+    "records": 8,
+    "sha256": "4522d7cb6f741c719a6145234a27adcb46dcce249820932961c3f8b4e4e89d5f"
+  },
+  "profile_safety": {
+    "includes_raw_value_samples": false,
+    "warning": null
+  }
+}
