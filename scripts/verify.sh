@@ -12,4 +12,5 @@ python -m flowlab run tests/fixtures/sample-auditctl.ndjson \
   --fail-on-error
 python -m flowlab report .test-output/report.json --output .test-output/report-rerendered.md
 cmp .test-output/report.md .test-output/report-rerendered.md
+./scripts/verify-campaign.sh
 printf '\nFlowLab verification passed.\n'

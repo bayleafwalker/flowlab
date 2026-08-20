@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "classification": "public-sanitized",
+  "construction": "deterministic reduction into Auditctl-shaped NDJSON; not a claim that the source producers emitted Auditctl events",
+  "input": {
+    "path": "evidence/campaign-2026-08-20/sanitized-auditctl.ndjson",
+    "records": 8,
+    "sha256": "4522d7cb6f741c719a6145234a27adcb46dcce249820932961c3f8b4e4e89d5f"
+  },
+  "sources": [
+    {
+      "session_id": "local-worker",
+      "source_classification": "host-persistent",
+      "repository": "https://github.com/bayleafwalker/cluster-alignment-mvp.git",
+      "evaluated_commit": "0a05a375459f939ed3c65b716bdedcdb737a2194",
+      "receipt_sha256": "bee8f37c820fc83bb503771511f3a2ce7447e530db55dfd1426c733994b0443b",
+      "timestamp_basis": "runner receipt and completed tool-event timestamps",
+      "limitations": ["permission denials are counts, not explicit blocker lifecycle events", "worker session end is used as the bounded timestamp by which its mechanical pass evidence existed", "formal AgentOps route qualification remains unproven"]
+    },
+    {
+      "session_id": "takeover-package",
+      "source_classification": "host-persistent",
+      "repository": "local takeover experiment package",
+      "evaluated_commit": "4412ca17fa76dbfa1c184140d290995947a9a63a",
+      "review_status_sha256": "166e51de824d87684ffc0f8c72cb69a6b5894d353a2468934c6e861aef0d2f26",
+      "timestamp_basis": "Git commit timestamps for the exact inspected commits",
+      "limitations": ["the session is intentionally truncated", "the physical-context-isolation blocker is unresolved at the evaluated commit", "G1 is not proven", "G7 and G8 are pending", "final verdict is withheld"]
+    }
+  ],
+  "excluded": ["credentials", "prompts", "model outputs", "raw transcripts", "command output", "worker bundles", "private identifiers"],
+  "disclosure_review": "Only generic identifiers, exact public commit/hash provenance, timestamps, and aggregate-safe event labels are retained. Hashes bind already-public code or high-entropy evidence artifacts; they do not encode secrets."
+}
