@@ -1,0 +1,31 @@
+{
+  "fields": {
+    "timestamp": ["ts"],
+    "event_type": ["type"],
+    "session_id": ["session_id"],
+    "work_id": ["work_id"],
+    "blocker_id": ["blocker_id"],
+    "blocker_class": ["blocker_class"],
+    "control": ["control"],
+    "oracle_kind": ["oracle.kind"],
+    "oracle_strength": ["oracle.strength"],
+    "oracle_result": ["oracle.result"],
+    "tool_name": ["tool"]
+  },
+  "events": {
+    "session.started": ["session.started"],
+    "session.ended": ["session.ended"],
+    "blocker.opened": ["blocker.opened"],
+    "blocker.resolved": ["blocker.resolved"],
+    "verification.started": ["verification.started"],
+    "verification.finished": ["verification.finished"],
+    "work.completed": ["work.completed"]
+  },
+  "meaningful_edit": {
+    "event_types": ["patch.applied", "commit.created"],
+    "tool_names": []
+  },
+  "control_by_blocker_class": {
+    "verification": "endogenous"
+  }
+}

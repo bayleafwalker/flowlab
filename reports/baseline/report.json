@@ -1,0 +1,123 @@
+{
+  "blockers": {
+    "by_class": {},
+    "by_control": {},
+    "classified_seconds": {
+      "endogenous": 0,
+      "exogenous": 0,
+      "exogenous_share_of_classified": null,
+      "unknown": 0
+    },
+    "records": []
+  },
+  "data_quality": {
+    "blocker_events_missing_id": 0,
+    "event_counts": {
+      "blocker.opened": 1,
+      "edit.meaningful": 2,
+      "session.ended": 1,
+      "session.started": 2,
+      "verification.finished": 2
+    },
+    "missing_session_id_events": 0,
+    "orphan_blocker_resolutions": 0,
+    "truncated_sessions": 1,
+    "unresolved_open_blockers": 1
+  },
+  "decision_signals": {
+    "competitive_duplication": {
+      "classes": []
+    },
+    "context_warming": {
+      "outcome": "UNMEASURABLE",
+      "rationale": "only 2 measurable sessions; gate requires 10"
+    },
+    "exogenous_speculation": {
+      "exogenous_share": null,
+      "outcome": "UNMEASURABLE"
+    }
+  },
+  "oracles": {
+    "counts": [
+      {
+        "count": 1,
+        "kind": "independent-review",
+        "result": "fail",
+        "strength": "strong"
+      },
+      {
+        "count": 1,
+        "kind": "mechanical",
+        "result": "pass",
+        "strength": "strong"
+      }
+    ]
+  },
+  "orientation": {
+    "fraction": {
+      "count": 2,
+      "cv": 0.8057416253508763,
+      "max": 0.4410901467505241,
+      "mean": 0.24427090817315308,
+      "median": 0.24427090817315308,
+      "min": 0.04745166959578207,
+      "p75": 0.3426805274618386,
+      "p90": 0.4017262990350499,
+      "stddev": 0.19681923857737102
+    },
+    "measurable_sessions": 2,
+    "missing_sessions": 0,
+    "seconds": {
+      "count": 2,
+      "cv": 0.806442979961864,
+      "max": 108.0,
+      "mean": 59.786,
+      "median": 59.786,
+      "min": 11.572,
+      "p75": 83.893,
+      "p90": 98.3572,
+      "stddev": 48.214
+    }
+  },
+  "sessions": [
+    {
+      "duration_seconds": 26.235,
+      "orientation_fraction": 0.4410901467505241,
+      "orientation_seconds": 11.572,
+      "session_id": "local-worker",
+      "time_to_first_verified_seconds": 26.235,
+      "truncated": false,
+      "work_ids": [
+        "git-aware-manifest"
+      ]
+    },
+    {
+      "duration_seconds": 2276.0,
+      "orientation_fraction": 0.04745166959578207,
+      "orientation_seconds": 108.0,
+      "session_id": "takeover-package",
+      "time_to_first_verified_seconds": null,
+      "truncated": true,
+      "work_ids": [
+        "takeover-evaluation"
+      ]
+    }
+  ],
+  "summary": {
+    "events": 8,
+    "resolved_blockers": 0,
+    "sessions": 2,
+    "verification_events": 2
+  },
+  "time_to_first_verified_seconds": {
+    "count": 1,
+    "cv": 0.0,
+    "max": 26.235,
+    "mean": 26.235,
+    "median": 26.235,
+    "min": 26.235,
+    "p75": 26.235,
+    "p90": 26.235,
+    "stddev": 0.0
+  }
+}

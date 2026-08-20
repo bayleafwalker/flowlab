@@ -1,0 +1,8 @@
+{"ts":"2026-08-20T07:00:49.000Z","type":"session.started","session_id":"takeover-package","work_id":"takeover-evaluation"}
+{"ts":"2026-08-20T07:02:37.000Z","type":"commit.created","session_id":"takeover-package","work_id":"takeover-evaluation"}
+{"ts":"2026-08-20T07:27:50.513Z","type":"session.started","session_id":"local-worker","work_id":"git-aware-manifest"}
+{"ts":"2026-08-20T07:28:02.085Z","type":"patch.applied","session_id":"local-worker","work_id":"git-aware-manifest"}
+{"ts":"2026-08-20T07:28:16.748Z","type":"verification.finished","session_id":"local-worker","work_id":"git-aware-manifest","oracle":{"kind":"mechanical","strength":"strong","result":"pass"}}
+{"ts":"2026-08-20T07:28:16.748Z","type":"session.ended","session_id":"local-worker","work_id":"git-aware-manifest"}
+{"ts":"2026-08-20T07:38:45.000Z","type":"verification.finished","session_id":"takeover-package","work_id":"takeover-evaluation","oracle":{"kind":"independent-review","strength":"strong","result":"fail"}}
+{"ts":"2026-08-20T07:38:45.000Z","type":"blocker.opened","session_id":"takeover-package","work_id":"takeover-evaluation","blocker_id":"physical-context-isolation","blocker_class":"verification","control":"endogenous"}
