@@ -1,0 +1,9 @@
+{
+  "input": {
+    "invalid_records": 0,
+    "path_name": "sample-auditctl.ndjson",
+    "records": 17,
+    "sha256": "f5943af4119a3ab22bc821f540008a4099c19588819a4862f5c3140bb5ac2275"
+  },
+  "note": "Contains hashes and counts only; raw input is not copied."
+}

@@ -46,3 +46,6 @@ ad6a12bb81bebebaf09470221a8560694592c62fe2a5ac43e0214ce339e75acc  ./src/flowlab/
 2b81407e348fa294602f2ec0814e13138b3d68342398c54ad2a09c8cf9b5692a  ./src/flowlab/util.py
 f5943af4119a3ab22bc821f540008a4099c19588819a4862f5c3140bb5ac2275  ./tests/fixtures/sample-auditctl.ndjson
 dbe8f291981dd97666767764a4f9cda510cbf5a4c57fc2d4e37c7e7c7e495745  ./tests/test_flowlab.py
+2573d8edc0dc366b730bc0217294a4a7a410ca0541fb2ecc3991821fea7cc253  ./evidence/auditctl-shape-profile.json
+74d2a4c64fa909446235e5f07ea4e1ff0564e09bbd68b30f1c3ae13c2f8a93ad  ./evidence/input-manifest.json
+e6250dccdcdb6c73a1c7323b2fef1c203a1e16a03390fa808e8cbbace346c122  ./reports/metric-semantics.md

@@ -1,0 +1,127 @@
+{
+  "candidates": {
+    "blocker": [
+      "blocker_id",
+      "blocker_class"
+    ],
+    "event_type": [
+      "type",
+      "oracle.kind"
+    ],
+    "oracle": [
+      "oracle.kind",
+      "oracle.result",
+      "oracle.strength"
+    ],
+    "session_id": [
+      "session_id"
+    ],
+    "timestamp": [
+      "ts"
+    ],
+    "work_id": [
+      "work_id"
+    ]
+  },
+  "errors": [],
+  "fields": {
+    "blocker_class": {
+      "count": 2,
+      "coverage": 0.11764705882352941,
+      "samples": [],
+      "types": {
+        "str": 2
+      }
+    },
+    "blocker_id": {
+      "count": 4,
+      "coverage": 0.23529411764705882,
+      "samples": [],
+      "types": {
+        "str": 4
+      }
+    },
+    "control": {
+      "count": 2,
+      "coverage": 0.11764705882352941,
+      "samples": [],
+      "types": {
+        "str": 2
+      }
+    },
+    "oracle.kind": {
+      "count": 3,
+      "coverage": 0.17647058823529413,
+      "samples": [],
+      "types": {
+        "str": 3
+      }
+    },
+    "oracle.result": {
+      "count": 3,
+      "coverage": 0.17647058823529413,
+      "samples": [],
+      "types": {
+        "str": 3
+      }
+    },
+    "oracle.strength": {
+      "count": 3,
+      "coverage": 0.17647058823529413,
+      "samples": [],
+      "types": {
+        "str": 3
+      }
+    },
+    "session_id": {
+      "count": 17,
+      "coverage": 1.0,
+      "samples": [],
+      "types": {
+        "str": 17
+      }
+    },
+    "tool": {
+      "count": 1,
+      "coverage": 0.058823529411764705,
+      "samples": [],
+      "types": {
+        "str": 1
+      }
+    },
+    "ts": {
+      "count": 17,
+      "coverage": 1.0,
+      "samples": [],
+      "types": {
+        "str": 17
+      }
+    },
+    "type": {
+      "count": 17,
+      "coverage": 1.0,
+      "samples": [],
+      "types": {
+        "str": 17
+      }
+    },
+    "work_id": {
+      "count": 17,
+      "coverage": 1.0,
+      "samples": [],
+      "types": {
+        "str": 17
+      }
+    }
+  },
+  "input": {
+    "invalid_records": 0,
+    "path_name": "sample-auditctl.ndjson",
+    "records": 17,
+    "sha256": "f5943af4119a3ab22bc821f540008a4099c19588819a4862f5c3140bb5ac2275"
+  },
+  "profile_safety": {
+    "includes_raw_value_samples": false,
+    "warning": null
+  }
+}
