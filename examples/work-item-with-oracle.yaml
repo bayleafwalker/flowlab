@@ -1,0 +1,18 @@
+id: FLOW-17
+title: Normalize auditctl session events
+
+oracle:
+  kind: mechanical
+  strength: strong
+  acceptance:
+    - all sanitized fixtures normalize without dropped required fields
+    - output is byte-identical across two runs
+    - unit and property tests pass
+  commands:
+    - ./scripts/verify.sh
+  latency_budget_seconds: 120
+  selection: all-pass
+  evidence_path: reports/verification/FLOW-17/
+  limitations:
+    - fixtures may not cover every historical producer revision
+  irreversible: false

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FlowLab normalized event",
+  "type": "object",
+  "required": ["timestamp", "event", "raw_index"],
+  "properties": {
+    "timestamp": {"type": "string", "format": "date-time"},
+    "event": {
+      "enum": [
+        "session.started", "session.ended", "edit.meaningful",
+        "blocker.opened", "blocker.resolved",
+        "verification.started", "verification.finished",
+        "work.completed", "other"
+      ]
+    },
+    "session_id": {"type": ["string", "null"]},
+    "work_id": {"type": ["string", "null"]},
+    "blocker_id": {"type": ["string", "null"]},
+    "blocker_class": {"type": ["string", "null"]},
+    "control": {"enum": ["endogenous", "exogenous", "unknown", null]},
+    "oracle_kind": {"enum": ["mechanical", "bounded", "human", "none", null]},
+    "oracle_strength": {"enum": ["strong", "medium", "weak", "unknown", null]},
+    "oracle_result": {"type": ["string", "null"]},
+    "raw_index": {"type": "integer", "minimum": 1},
+    "source_event": {"type": ["string", "null"]},
+    "source_tool": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

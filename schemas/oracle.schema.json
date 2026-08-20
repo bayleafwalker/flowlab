@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Work item oracle declaration",
+  "type": "object",
+  "required": ["kind", "strength", "acceptance"],
+  "properties": {
+    "kind": {"enum": ["mechanical", "bounded", "human", "none"]},
+    "strength": {"enum": ["strong", "medium", "weak"]},
+    "acceptance": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "commands": {"type": "array", "items": {"type": "string"}},
+    "latency_budget_seconds": {"type": "integer", "minimum": 0},
+    "selection": {"enum": ["all-pass", "first-pass", "best-score", "human-choice"]},
+    "evidence_path": {"type": "string"},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "irreversible": {"type": "boolean", "default": false}
+  },
+  "additionalProperties": false
+}

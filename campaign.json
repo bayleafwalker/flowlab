@@ -1,0 +1,55 @@
+{
+  "campaign": "flowlab-thursday-2026-08-20",
+  "objective": "Minimize uncertainty about where agent capacity reduces time-to-verified-complete.",
+  "wip_limit": 2,
+  "workfronts": [
+    {
+      "id": "WF-0",
+      "name": "Ground actual auditctl schema",
+      "depends_on": [],
+      "parallelism": {"mode": "support", "max_agents": 4},
+      "oracle": {"kind": "mechanical", "strength": "strong", "evidence": ["deterministic profile", "mapping fixture round-trip"]},
+      "outputs": ["evidence/auditctl-profile.json", "evidence/input-manifest.json", "config/auditctl-map.json"]
+    },
+    {
+      "id": "WF-1",
+      "name": "Adapt and verify metric kernel",
+      "depends_on": ["WF-0"],
+      "parallelism": {"mode": "support", "max_agents": 6},
+      "oracle": {"kind": "mechanical", "strength": "strong", "command": "./scripts/verify.sh"},
+      "outputs": ["tests/fixtures/auditctl-sanitized.ndjson", "reports/metric-semantics.md"]
+    },
+    {
+      "id": "WF-2",
+      "name": "Produce retrospective baseline",
+      "depends_on": ["WF-1"],
+      "parallelism": {"mode": "partitioned", "max_agents": 4},
+      "oracle": {"kind": "bounded", "strength": "medium", "evidence": ["reproduction", "source manifest", "data-quality report"]},
+      "outputs": ["reports/baseline/report.json", "reports/baseline/report.md"]
+    },
+    {
+      "id": "WF-3",
+      "name": "Reconstruct one real blocker class",
+      "depends_on": ["WF-2"],
+      "parallelism": {"mode": "competitive", "max_agents": 5},
+      "oracle": {"kind": "bounded", "strength": "medium", "evidence": ["recorded timeline", "counterfactual assumptions", "verification cost"]},
+      "outputs": ["reports/case-study/report.md"]
+    },
+    {
+      "id": "WF-4",
+      "name": "Challenge and reduce",
+      "depends_on": ["WF-2", "WF-3"],
+      "parallelism": {"mode": "support", "max_agents": 4},
+      "oracle": {"kind": "human", "strength": "bounded", "evidence": ["adversarial findings", "decision gates", "ADR"]},
+      "outputs": ["decisions/ADR-0001-flow-capacity.md", "reports/final-outcome.md"]
+    },
+    {
+      "id": "WF-5",
+      "name": "Increase confidence with remaining quota",
+      "depends_on": ["WF-4"],
+      "parallelism": {"mode": "partitioned", "max_agents": 10},
+      "oracle": {"kind": "mechanical", "strength": "varies", "evidence": ["ordered quota-sink item acceptance"]},
+      "outputs": []
+    }
+  ]
+}

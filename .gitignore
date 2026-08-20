@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+dist/
+build/
+*.egg-info/
+.test-output/
+.coverage
+.pytest_cache/
+
+# Raw/private evidence must remain outside version control.
+evidence/raw/
+*.raw.ndjson
+*.secret.ndjson
+
+# Generated sample/baseline outputs may be committed intentionally after review.

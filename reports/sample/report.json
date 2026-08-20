@@ -1,0 +1,218 @@
+{
+  "blockers": {
+    "by_class": {
+      "design": {
+        "count": 1,
+        "cv": 0.0,
+        "max": 1200.0,
+        "mean": 1200.0,
+        "median": 1200.0,
+        "min": 1200.0,
+        "p75": 1200.0,
+        "p90": 1200.0,
+        "stddev": 0.0
+      },
+      "human": {
+        "count": 1,
+        "cv": 0.0,
+        "max": 1200.0,
+        "mean": 1200.0,
+        "median": 1200.0,
+        "min": 1200.0,
+        "p75": 1200.0,
+        "p90": 1200.0,
+        "stddev": 0.0
+      }
+    },
+    "by_control": {
+      "endogenous": {
+        "count": 1,
+        "cv": 0.0,
+        "max": 1200.0,
+        "mean": 1200.0,
+        "median": 1200.0,
+        "min": 1200.0,
+        "p75": 1200.0,
+        "p90": 1200.0,
+        "stddev": 0.0
+      },
+      "exogenous": {
+        "count": 1,
+        "cv": 0.0,
+        "max": 1200.0,
+        "mean": 1200.0,
+        "median": 1200.0,
+        "min": 1200.0,
+        "p75": 1200.0,
+        "p90": 1200.0,
+        "stddev": 0.0
+      }
+    },
+    "classified_seconds": {
+      "endogenous": 1200.0,
+      "exogenous": 1200.0,
+      "exogenous_share_of_classified": 0.5,
+      "unknown": 0
+    },
+    "records": [
+      {
+        "blocker_class": "design",
+        "blocker_id": "b1",
+        "control": "endogenous",
+        "duration_seconds": 1200.0,
+        "session_id": "s1",
+        "work_id": "w1"
+      },
+      {
+        "blocker_class": "human",
+        "blocker_id": "b2",
+        "control": "exogenous",
+        "duration_seconds": 1200.0,
+        "session_id": "s2",
+        "work_id": "w2"
+      }
+    ]
+  },
+  "data_quality": {
+    "blocker_events_missing_id": 0,
+    "event_counts": {
+      "blocker.opened": 2,
+      "blocker.resolved": 2,
+      "edit.meaningful": 3,
+      "other": 1,
+      "session.ended": 3,
+      "session.started": 3,
+      "verification.finished": 3
+    },
+    "missing_session_id_events": 0,
+    "orphan_blocker_resolutions": 0,
+    "truncated_sessions": 0,
+    "unresolved_open_blockers": 0
+  },
+  "decision_signals": {
+    "competitive_duplication": {
+      "classes": [
+        {
+          "blocker_class": "design",
+          "p90_median_ratio": 1.0,
+          "requires_oracle_and_reconciliation_check": true,
+          "variance_gate": false
+        },
+        {
+          "blocker_class": "human",
+          "p90_median_ratio": 1.0,
+          "requires_oracle_and_reconciliation_check": true,
+          "variance_gate": false
+        }
+      ]
+    },
+    "context_warming": {
+      "outcome": "UNMEASURABLE",
+      "rationale": "only 3 measurable sessions; gate requires 10"
+    },
+    "exogenous_speculation": {
+      "exogenous_share": 0.5,
+      "outcome": "ADDRESSABLE_CANDIDATE"
+    }
+  },
+  "oracles": {
+    "counts": [
+      {
+        "count": 1,
+        "kind": "bounded",
+        "result": "fail",
+        "strength": "medium"
+      },
+      {
+        "count": 1,
+        "kind": "human",
+        "result": "pass",
+        "strength": "medium"
+      },
+      {
+        "count": 1,
+        "kind": "mechanical",
+        "result": "pass",
+        "strength": "strong"
+      }
+    ]
+  },
+  "orientation": {
+    "fraction": {
+      "count": 3,
+      "cv": 0.21757131728816842,
+      "max": 0.16666666666666666,
+      "mean": 0.14444444444444446,
+      "median": 0.16666666666666666,
+      "min": 0.1,
+      "p75": 0.16666666666666666,
+      "p90": 0.16666666666666666,
+      "stddev": 0.03142696805273544
+    },
+    "measurable_sessions": 3,
+    "missing_sessions": 0,
+    "seconds": {
+      "count": 3,
+      "cv": 0.6903350635742038,
+      "max": 600.0,
+      "mean": 320.0,
+      "median": 300.0,
+      "min": 60.0,
+      "p75": 450.0,
+      "p90": 540.0,
+      "stddev": 220.90722034374522
+    }
+  },
+  "sessions": [
+    {
+      "duration_seconds": 3600.0,
+      "orientation_fraction": 0.16666666666666666,
+      "orientation_seconds": 600.0,
+      "session_id": "s1",
+      "time_to_first_verified_seconds": 3000.0,
+      "truncated": false,
+      "work_ids": [
+        "w1"
+      ]
+    },
+    {
+      "duration_seconds": 1800.0,
+      "orientation_fraction": 0.16666666666666666,
+      "orientation_seconds": 300.0,
+      "session_id": "s2",
+      "time_to_first_verified_seconds": 1680.0,
+      "truncated": false,
+      "work_ids": [
+        "w2"
+      ]
+    },
+    {
+      "duration_seconds": 600.0,
+      "orientation_fraction": 0.1,
+      "orientation_seconds": 60.0,
+      "session_id": "s3",
+      "time_to_first_verified_seconds": null,
+      "truncated": false,
+      "work_ids": [
+        "w3"
+      ]
+    }
+  ],
+  "summary": {
+    "events": 17,
+    "resolved_blockers": 2,
+    "sessions": 3,
+    "verification_events": 3
+  },
+  "time_to_first_verified_seconds": {
+    "count": 2,
+    "cv": 0.28205128205128205,
+    "max": 3000.0,
+    "mean": 2340.0,
+    "median": 2340.0,
+    "min": 1680.0,
+    "p75": 2670.0,
+    "p90": 2868.0,
+    "stddev": 660.0
+  }
+}

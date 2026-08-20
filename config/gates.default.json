@@ -1,0 +1,18 @@
+{
+  "warming": {
+    "minimum_sessions": 10,
+    "adopt_median_fraction": 0.15,
+    "adopt_p75_fraction": 0.25,
+    "reject_median_fraction": 0.10,
+    "reject_p75_fraction": 0.15
+  },
+  "duplication": {
+    "minimum_blockers": 8,
+    "minimum_cv": 0.75,
+    "minimum_p90_median_ratio": 2.0
+  },
+  "speculation": {
+    "addressable_exogenous_share": 0.20,
+    "low_exogenous_share": 0.10
+  }
+}

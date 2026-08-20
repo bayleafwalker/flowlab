@@ -1,0 +1,41 @@
+{
+  "fields": {
+    "timestamp": ["ts", "timestamp", "time", "created_at"],
+    "event_type": ["event", "type", "kind", "event_type"],
+    "session_id": ["session_id", "session.id", "origin_session_id"],
+    "work_id": ["work_id", "task_id", "work.id", "sprint_id"],
+    "blocker_id": ["blocker_id", "blocker.id"],
+    "blocker_class": ["blocker_class", "blocker.class", "reason"],
+    "control": ["control", "blocker.control"],
+    "oracle_kind": ["oracle.kind", "oracle_class", "verification.oracle"],
+    "oracle_strength": ["oracle.strength", "oracle_strength"],
+    "oracle_result": ["oracle.result", "result", "status"],
+    "tool_name": ["tool", "tool_name", "name"]
+  },
+  "events": {
+    "session.started": ["session.started", "session_start"],
+    "session.ended": ["session.ended", "session_end"],
+    "blocker.opened": ["blocker.opened", "blocked", "work.blocked"],
+    "blocker.resolved": ["blocker.resolved", "unblocked", "work.unblocked"],
+    "verification.started": ["verification.started", "test.started"],
+    "verification.finished": ["verification.finished", "test.finished", "check.finished"],
+    "work.completed": ["work.completed", "task.completed", "session.completed"]
+  },
+  "meaningful_edit": {
+    "event_types": ["file.edited", "patch.applied", "commit.created", "artifact.written"],
+    "tool_names": ["apply_patch", "write_file", "edit_file", "create_file"]
+  },
+  "control_by_blocker_class": {
+    "human": "exogenous",
+    "vendor": "exogenous",
+    "compliance": "exogenous",
+    "external-service": "exogenous",
+    "rate-limit": "exogenous",
+    "long-job": "exogenous",
+    "design": "endogenous",
+    "implementation": "endogenous",
+    "integration": "endogenous",
+    "test": "endogenous",
+    "environment": "endogenous"
+  }
+}
