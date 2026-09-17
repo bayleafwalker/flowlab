@@ -14,3 +14,8 @@ evidence/raw/
 *.secret.ndjson
 
 # Generated sample/baseline outputs may be committed intentionally after review.
+
+# auditctl local event database and NDJSON audit shards (auditctl 0.1.8, hook output
+# from nearest-marker rooting; not committed in this repo)
+.auditctl/
+_artifacts/*/audit*/
